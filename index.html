@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+
+
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+      <style>
+          .carousel-inner > .item > img,
+          .carousel-inner > .item > a > img {
+              width: 70%;
+              margin: auto;
+          }
+      </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+
+
+
+      <script src="/js/modernizr.js"></script>
+      <link rel="stylesheet" href="/css/main.css">
+
+
+
+      <script src="/js/numeral.min.js"></script>
+
+
+
+      <script type="text/javascript" src="http://currencyconverter.55uk.net/currency_converter_json.js"></script>
+      <script type="text/javascript">
+          function getMyRates(jData) {
+              if (jData == null) {
+                  alert("There was a problem parsing search results.");
+                  return;
+              }
+              var myval = jData.ResultSet;
+              var mydiv = jData.xxMyDiv;
+              document.getElementById(mydiv).innerHTML = myval;
+          }
+
+          function myPrivateConverterMany() {
+              var xxv = document.getElementById('xxvalue').value;
+              var xxf = document.getElementById('xxfrom').value;
+              var xxt = document.getElementById('xxto').value;
+              if (xxv > 0) {
+                  getExchangeRatesDiv('xxrates',xxv,xxf,xxt,'true');
+              }
+          }
+      </script>
+
+
+
+
+      <script type="text/javascript" src="http://currencyconverter.55uk.net/currency_converter_json.js"></script>
+      <script type="text/javascript">
+          function getMyRates(jData) {
+              if (jData == null) {
+                  alert("There was a problem parsing search results.");
+                  return;
+              }
+              var myval = jData.ResultSet;
+              var mydiv = jData.xxMyDiv;
+              document.getElementById(mydiv).innerHTML = myval;
+          }
+
+          function myPrivateConverterMany1() {
+              var xxv = document.getElementById('xxxvalue').value;
+              var xxf = document.getElementById('xxxfrom').value;
+              var xxt = document.getElementById('xxxto').value;
+              if (xxv > 0) {
+                  getExchangeRatesDiv('xxxrates',xxv,xxf,xxt,'true');
+              }
+          }
+      </script>
+
+  </head>
+  <body ng-app="starter" animation="slide-left-right-ios7">
+    <!-- 
+      The nav bar that will be updated as we navigate between views.
+
+
+    -->
+
+
+
+    <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+      <ion-nav-back-button class="button-icon icon  ion-ios7-arrow-back">
+        Back
+      </ion-nav-back-button>
+    </ion-nav-bar>
+    <!-- 
+      The views will be rendered in the <ion-nav-view> directive below
+      Templates are in the /templates folder (but you could also
+      have templates inline in this html file if you'd like).
+    -->
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html>
